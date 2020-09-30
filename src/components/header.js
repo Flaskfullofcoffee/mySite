@@ -8,29 +8,30 @@ const Header = () => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
   `)
 
   return (
-    <header>
+    <header className={headerStyles.wrapper}>
       <h1>
-        <Link to='/' className={headerStyles.title}>{data.site.siteMetadata.title}</Link>
+        <Link to='/' className={headerStyles.title}>{data.site.siteMetadata.author}</Link>
       </h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
+      <nav className={headerStyles.nav}>
+        <ul className={headerStyles.list}>
+          <li className={headerStyles.listItem}>
+            <Link className={headerStyles.listLink} to='/'>Home</Link>
           </li>
-          <li>
-            <Link to='/works'>Works</Link>
+          <li className={headerStyles.listItem}>
+            <Link className={headerStyles.listLink} to='/works'>Works</Link>
           </li>
-          <li>
-            <Link to='/contact'>Contact</Link>
+          <li className={headerStyles.listItem}>
+            <Link className={headerStyles.listLink} to='/contact'>Contact</Link>
           </li>
-          <li>
-            <Link to='/about'>About</Link>
+          <li className={headerStyles.listItem}>
+            <Link className={headerStyles.listLink} to='/about'>About</Link>
           </li>
         </ul>
       </nav>

@@ -2,13 +2,19 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import Footer from '../components/footer'
+import layoutStyles from '../components/layout.module.scss'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Head title='Home'/>
-      <h1>This is the index Page</h1>
-      <p>This is the index pages content</p>
+      <div className={layoutStyles.testWrapper}>
+        <div className={layoutStyles.test1}></div>
+        <div className={layoutStyles.test2}></div>
+        <div className={layoutStyles.test1}></div>
+        <div className={layoutStyles.test2}></div>
+        <Footer />
+      </div>
     </Layout>
   )
 }
